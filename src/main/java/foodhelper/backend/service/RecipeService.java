@@ -4,7 +4,6 @@ import foodhelper.backend.dto.NutrientDTO;
 import foodhelper.backend.dto.RecipeDTO;
 import foodhelper.backend.exception.EntityNotFoundException;
 import foodhelper.backend.exception.NutrientValueNotFoundException;
-import foodhelper.backend.model.Product;
 import foodhelper.backend.model.ProductConsumed;
 import foodhelper.backend.model.Recipe;
 import foodhelper.backend.repository.RecipeRepository;

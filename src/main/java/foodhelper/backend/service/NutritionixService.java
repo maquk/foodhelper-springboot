@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class NutritionixService {
     private static final String X_APP_ID = "8d1bd058";
-    private static final String X_APP_KEY = "4b105532dbaf1546f254494b4dcf6a23";
+    private static final String X_APP_KEY = "ad6fcccb5c6262e88f20a8f9ee39bd02";
     private static final String URL = "https://trackapi.nutritionix.com/v2/natural/nutrients";
 
     private final ProductRepository productRepository;
@@ -35,6 +35,8 @@ public class NutritionixService {
         NutritionixRequest nutritionixRequest = new NutritionixRequest();
 
         nutritionixRequest.setQuery(query);
+
+        System.out.println("FETCHING PRODUCTS - " + new Object(){}.getClass().getEnclosingMethod().getName());
 
         final HttpEntity<NutritionixRequest> entity = new HttpEntity<>(nutritionixRequest, headers);
         RestTemplate restTemplate = new RestTemplate();

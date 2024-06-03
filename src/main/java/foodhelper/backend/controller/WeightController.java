@@ -31,10 +31,11 @@ public class WeightController {
         return ResponseEntity.ok().build();
     }
 
+    //TODO tu coś było sprawdzane
     @GetMapping
     public ResponseEntity<?> findAllByDateBetween(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fromDate,
                                                   @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate toDate) {
-        System.out.println("JESTEM");
+        System.out.println("SZUKANIE WAG PO DACIE - " + new Object(){}.getClass().getEnclosingMethod().getName());
         return ResponseEntity.ok(weightService.findAllByDateBetween(fromDate, toDate));
     }
 }
